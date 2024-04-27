@@ -13,10 +13,10 @@ document.getElementById('routingForm').addEventListener('submit', function(event
 });
 
 function getRoute(departureAirport, arrivalAirport) {
-    if (departureAirport === "DEN" && arrivalAirport === "COS") {
+    if (departureAirport === "KDEN" && arrivalAirport === "KCOS") {
         // Hardcoded route for DEN-COS
         return "Route: LUFSE V389 ADANE BRK";
     } else {
-        return "Route not found for the specified airports.";
+        return "Route not found.";
     }
 }
