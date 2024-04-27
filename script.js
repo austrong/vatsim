@@ -13,14 +13,13 @@ document.getElementById('routingForm').addEventListener('submit', function(event
 });
 
 function getRoute(departureAirport, arrivalAirport) {
+    return "Route not found."
+    
     if (departureAirport === "KDEN" && arrivalAirport === "KCOS") {
         return "Route: LUFSE V389 ADANE BRK";
-    } else {
-        return "Route not found.";
     }
+        
     if (departureAirport === "KDEN" && arrivalAirport ==="KORD") {
         return "Route: EEONS8 WYNDM OBH FOD MYRRS FYTTE7";
-    } else {
-        return "Route not found.";
     }
 }
