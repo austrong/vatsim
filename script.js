@@ -4,8 +4,7 @@ document.getElementById('routingForm').addEventListener('submit', function(event
     var departureAirport = document.getElementById('departureAirport').value.toUpperCase();
     var arrivalAirport = document.getElementById('arrivalAirport').value.toUpperCase();
 
-    // Here you can implement the logic to fetch the route based on departure and arrival airports
-    // For this example, let's hardcode the route for DEN-COS
+    // Get the route based on the departure and arrival airports
     var route = getRoute(departureAirport, arrivalAirport);
 
     // Display the route
@@ -13,13 +12,13 @@ document.getElementById('routingForm').addEventListener('submit', function(event
 });
 
 function getRoute(departureAirport, arrivalAirport) {
-    return "Route not found."
-    
     if (departureAirport === "KDEN" && arrivalAirport === "KCOS") {
         return "Route: LUFSE V389 ADANE BRK";
-    }
-        
-    if (departureAirport === "KDEN" && arrivalAirport ==="KORD") {
+    } else if (departureAirport === "KDEN" && arrivalAirport === "KORD") {
         return "Route: EEONS8 WYNDM OBH FOD MYRRS FYTTE7";
+    } else if (departureAirport === "KDEN" && arrivalAirport === "KICT") {
+        return: "Route: This works, but I don't have a route";
+    } else {
+        return "Route not found for the specified airports.";
     }
 }
