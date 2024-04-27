@@ -24,12 +24,14 @@ label {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to leave space for padding */
     padding: 8px;
+    margin: 0 auto; /* Center horizontally */
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 
 button {
     display: block;
