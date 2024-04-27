@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VATSIM Routing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>VATSIM Routing System</h1>
+        <form id="routingForm">
+            <label for="departureAirport">Departure Airport:</label>
+            <input type="text" id="departureAirport" name="departureAirport" required>
+
+            <label for="arrivalAirport">Arrival Airport:</label>
+            <input type="text" id="arrivalAirport" name="arrivalAirport" required>
+
+            <button type="submit">Get Route</button>
+        </form>
+
+        <div id="routeDisplay"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
