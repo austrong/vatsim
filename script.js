@@ -4,14 +4,13 @@ document.getElementById('routingForm').addEventListener('submit', function(event
     var departureAirport = document.getElementById('departureAirport').value.toUpperCase();
     var arrivalAirport = document.getElementById('arrivalAirport').value.toUpperCase();
 
-    // Get the route based on the departure and arrival airports
+    // Get the route based on the airports
     var route = getRoute(departureAirport, arrivalAirport);
 
     // Display the route
     document.getElementById('routeDisplay').innerText = route;
 });
 
-// Define a JavaScript object to store routes for each airport pair
 const routes = {
     "KEWR-KPDX": "GAYEL Q818 WOZEE Q917 SSM APUNY OGSIQ LWT PDT JKNOX HHOOD4",
     "KATL-KLAX": "NASSA2 YAALL J14 PNH J6 DRK J231 HIPPI GABBL HLYWD1",
@@ -22,7 +21,8 @@ const routes = {
     "KPDX-KBOS": "LAVAA6 PDT HLN J90 MLS KP06Y KP06C GOLLF KP03K SIKBO Q140 AHPAH JOSSY PONCT JFUND2",
     "KPDX-KMIA": "LAVAA6 PDT J20 LAA J168 SPS J58 HRV Q105 BLVNS Y290 GAWKS FROGZ1",
     "KPDX-KEWR": "LAVAA6 PDT J16 HIA KU03S LSCOM KEKPE/N0464F390 KP90E WIDIS KP87I OSH KG81O KC78Q GNTRY KC69W SLT FQM3",
-    "KPDX-KMCO": "TIMEE KU84K KU75Q CKW KD60Y LYGHT KM39G UJM ACORI DEEDA"
+    "KPDX-KMCO": "TIMEE KU84K KU75Q CKW KD60Y LYGHT KM39G UJM ACORI DEEDA",
+    "DEN-GUM": "Generate your own route at https://simbrief.com.",
 };
 
 function getRoute(departureAirport, arrivalAirport) {
@@ -34,10 +34,6 @@ function getRoute(departureAirport, arrivalAirport) {
     if (routes.hasOwnProperty(routeKey)) {
         return routes[routeKey];
     } else {
-        return "Route not found for the specified airports.";
+        return "Route not found.";
     }
 }
-
-// Example usage:
-console.log(getRoute("KEWR", "KPDX")); // Output: GAYEL Q818 WOZEE Q917 SSM APUNY OGSIQ LWT PDT JKNOX HHOOD4
-console.log(getRoute("KATL", "KLAX")); // Output: NASSA2 YAALL J14 PNH J6 DRK J231 HIPPI GABBL HLYWD1
